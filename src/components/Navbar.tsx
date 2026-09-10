@@ -1,4 +1,4 @@
-import logo from "./assets/logo-text.png";
+import logo from "../assets/logo-text.png";
 const Navbar = () => {
   return (
     <div className="container mx-auto mt-5 sticky top-0 z-50 bg-white/30 backdrop-blur-md">
