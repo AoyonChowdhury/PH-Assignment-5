@@ -1,10 +1,11 @@
-import React, { use, useState } from "react";
+import { use, useState } from "react";
 import type { ITechnologyType } from "../Types/ITechnologyType";
 import { toast } from "react-toastify";
 import { RiCloseLargeLine } from "react-icons/ri";
 
-const TechnologyCards = ({ technologyPromise }): Promise<ITechnologyType> => {
-  const data = use(technologyPromise);
+
+const TechnologyCards = ({ technologyPromise }):ITechnologyType => {
+  const data = use<ITechnologyType[]>(technologyPromise);
   const [addedIds, setAddedIds] = useState<string[]>([]);
 
   const addedTechnologies = data.filter((technology: ITechnologyType) =>

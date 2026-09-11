@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import TechnologyCards from "./components/TechnologyCards";
 import type { ITechnologyType } from "./Types/ITechnologyType";
 import Footer from "./components/Footer";
-const technologyFetch = async ():Promise<ITechnologyType> => {
-  const res = fetch("/data.json");
-  const data = (await res).json();
+const technologyFetch = async (): Promise<ITechnologyType[]> => {
+  const res = await fetch("/data.json");
+  const data = await res.json();
   return data;
 };
 function App() {
