@@ -3,8 +3,10 @@ import type { ITechnologyType } from "../Types/ITechnologyType";
 import { toast } from "react-toastify";
 import { RiCloseLargeLine } from "react-icons/ri";
 
-
-const TechnologyCards = ({ technologyPromise }):ITechnologyType => {
+interface TechnologyCardsProps {
+  technologyPromise: Promise<ITechnologyType[]>;
+}
+const TechnologyCards = ({ technologyPromise }: TechnologyCardsProps) => {
   const data = use<ITechnologyType[]>(technologyPromise);
   const [addedIds, setAddedIds] = useState<string[]>([]);
 
